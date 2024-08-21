@@ -1,0 +1,4 @@
+{
+    "chromedriver_path": "drivers/chromedriver",
+    "logs_path": "logs/"
+}
