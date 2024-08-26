@@ -1,6 +1,6 @@
-.venv/
 venv/
-venv
 logs/*
 output/*
 .DS_Store
+images/*
+output/*

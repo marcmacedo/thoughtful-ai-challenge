@@ -1,46 +1,38 @@
-import json, os, logging
-from datetime import datetime
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+from config import DEFAULT_SEARCH_URL
+from web_driver_manager import WebDrvierManager
+from news_scraper import NewsScraper
+from news_filter import NewsFilter
+from excel_exporter import ExcelExporter
+from selenium.common.exceptions import TimeoutException
 
-# Loading project configs (probably will keep all configs fixed in code)
-config_path = os.path.join('config', 'config.json')
-with open(config_path) as config_file:
-    config = json.load(config_file)
+import json
 
-driver_path = config['chromedriver_path']
+def main():
+    driver_manager = WebDrvierManager(headless=False)
+    driver = driver_manager.get_driver()
 
-# Maybe I'll change this later
-logging.basicConfig(
-    filename=f'{config["logs_path"]}/app.log',
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    datefmt='%Y-%m-%d %H:%M:%S'
-)
+    retry_attempts = 0 
+    while retry_attempts < 3:
+        try:
+            scraper = NewsScraper(driver, search_phrase="Sports", months=3)
+            scraper.search_news(DEFAULT_SEARCH_URL)
+            news_data = scraper.scrape_result()
+            print(json.dumps(news_data, indent=4, ensure_ascii=False))
+            print(len(news_data))
 
+            if isinstance(news_data, list) and len(news_data) > 0:
+                break
 
-logging.info('Info logging test!!!')
+        except TimeoutException:
+            print(f"Timeout error. Retrying.")
+            retry_attempts += 1
+    # filter = NewsFilter(news_data, months=2)
+    # filtered_news = filter.filter_by_date()
 
+    # exporter = ExcelExporter(filtered_news, output_path='output/news_data.xlsx')
+    # exporter.export_to_excel()
 
+    driver_manager.quit_driver()
 
-service = Service(executable_path=driver_path)
-
-chrome_options = Options()
-chrome_options.add_argument("--headless")
-
-driver = webdriver.Chrome(service=service, options=chrome_options)
-
-
-driver.get('https://www.aljazeera.com')
-
-try:
-    # element = driver.find_element(By.TAG_NAME, 'h1')
-    element = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.TAG_NAME, 'h3')))
-    print(element.text)
-finally:
-    print("deu certo!")
-driver.quit()
+if __name__ == '__main__':
+    main()
