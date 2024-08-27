@@ -1,5 +1,4 @@
 from robocorp.tasks import task
-# from robocorp.workitems import WorkItem
 from RPA.Robocorp.WorkItems import WorkItems
 from src.main import main
 
@@ -7,9 +6,9 @@ from src.main import main
 def minimal_task():
     wi = WorkItems()
     wi.get_input_work_item()
-    
+
     search_phrase = wi.get_work_item_variable('search_phrase')
-    print(search_phrase)
+    months = wi.get_work_item_variable('months')
+    headless = wi.get_work_item_variable('headless')
 
-
-    # main(search_phrase, months, headless)
+    main(search_phrase, months, headless)
