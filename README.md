@@ -21,7 +21,7 @@ Before you begin, ensure you have the following installed:
 
 ### Setup
 
-	1.	Clone the repository:
+1. Clone the repository:
   ```bash
   git clone https://github.com/marcmacedo/thoughtful-ai-challenge.git
   cd thoughtful-ai-challenge
