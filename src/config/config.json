@@ -1,6 +1,6 @@
 {
     "chrome_driver_path": "drivers/chromedriver",
-    "log_file_path": "logs/",
+    "log_file_path": "output/logs/",
     "images_path": "output/images",
     "output_files_path": "output/",
     "default_search_url": "https://www.aljazeera.com",
