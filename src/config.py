@@ -1,8 +1,8 @@
 import os
 import json
-import shutil
 
 CONFIG_PATH = os.path.join(os.path.dirname(__file__), '../config', 'config.json')
+
 
 def load_config():
     with open(CONFIG_PATH, 'r') as config_file:
@@ -31,5 +31,6 @@ IMAGES_PATH = config.get('images_path')
 OUTPUT_FILES_PATH = config.get('output_files_path')
 CHROME_DRIVER_PATH = config.get('chrome_driver_path')
 DEFAULT_SEARCH_URL = config.get('default_search_url')
+MAX_RETRIES = config.get('max_retries')
 
 create_directories()

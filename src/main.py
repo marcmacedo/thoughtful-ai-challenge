@@ -1,38 +1,47 @@
-from config import DEFAULT_SEARCH_URL
+from config import DEFAULT_SEARCH_URL, MAX_RETRIES, OUTPUT_FILES_PATH
 from web_driver_manager import WebDrvierManager
 from news_scraper import NewsScraper
-from news_filter import NewsFilter
 from excel_exporter import ExcelExporter
 from selenium.common.exceptions import TimeoutException
+from datetime import datetime
+from logger import setup_logger
+import warnings
+warnings.filterwarnings("ignore")
 
-import json
+logger = setup_logger()
+
 
 def main():
-    driver_manager = WebDrvierManager(headless=False)
+    driver_manager = WebDrvierManager(headless=True)
     driver = driver_manager.get_driver()
 
     retry_attempts = 0 
-    while retry_attempts < 3:
+    while retry_attempts < MAX_RETRIES:
         try:
-            scraper = NewsScraper(driver, search_phrase="Sports", months=3)
+            scraper = NewsScraper(driver, search_phrase="São Paulo", months=0)
             scraper.search_news(DEFAULT_SEARCH_URL)
             news_data = scraper.scrape_result()
-            print(json.dumps(news_data, indent=4, ensure_ascii=False))
-            print(len(news_data))
+            logger.info('Data collected, validating payload...')
 
-            if isinstance(news_data, list) and len(news_data) > 0:
+
+            if isinstance(news_data, list):
+                logger.info('Payload validated, exporting to sheet format')
+                file_name = (datetime.now()).strftime('%m_%d_%Y-%Hh%mmin')
+                file_name = f'{str(file_name)}_news_data.xlsx'
+                exporter = ExcelExporter(news_data, output_path=f'{OUTPUT_FILES_PATH}{file_name}')
+                exporter.export_to_excel()
+                logger.info(f'File exported to "{OUTPUT_FILES_PATH}" with name {file_name}')
                 break
 
         except TimeoutException:
-            print(f"Timeout error. Retrying.")
             retry_attempts += 1
-    # filter = NewsFilter(news_data, months=2)
-    # filtered_news = filter.filter_by_date()
+            logger.warning(f'Got any response, retrying. Max tries={MAX_RETRIES}, current try={retry_attempts} ')
 
-    # exporter = ExcelExporter(filtered_news, output_path='output/news_data.xlsx')
-    # exporter.export_to_excel()
+    
+
 
     driver_manager.quit_driver()
 
 if __name__ == '__main__':
+
     main()

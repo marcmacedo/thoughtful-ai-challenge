@@ -3,5 +3,6 @@
     "log_file_path": "logs/",
     "images_path": "images/",
     "output_files_path": "output/",
-    "default_search_url": "https://www.aljazeera.com"
+    "default_search_url": "https://www.aljazeera.com",
+    "max_retries": 3
 }
