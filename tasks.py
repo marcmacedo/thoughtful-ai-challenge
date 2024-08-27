@@ -1,13 +1,16 @@
-from robocorp.tasks import task, get_work_item
-from src.main import main
-import subprocess
+from robocorp.tasks import task
+# from robocorp.workitems import WorkItem
+from RPA.Robocorp.WorkItems import WorkItems
 
 @task
 def minimal_task():
-    work_item = get_work_item()
+    work_item = WorkItems()
 
-    search_phrase = work_item.get('search_phrase', 'Sports')
-    months = work_item.get('months', 0)
-    headless = work_item.get('headless', True)
 
-    subprocess.run(['python', 'src/main.py', (search_phrase, months, headless)])
+    # teste = work_item.get_input_work_item()
+    search_phrase = work_item.get_work_item_variable('search_phrase', 'default_value')
+    months = work_item.get_work_item_variable('months', 'default_value')
+    headless = work_item.get_work_item_variable('headless', 'default_value')
+
+    from src.main import main
+    main(search_phrase, months, headless)

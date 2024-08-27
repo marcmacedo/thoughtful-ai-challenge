@@ -1,3 +1,24 @@
 
 Collecting tasks from: tasks.py
+============================ Running: [96mminimal_task[0m =============================
+[96mminimal_task[0m status: [91mFAIL
+[0m[91m
+No active work item
+[0m==================== Full Traceback (running [96mminimal_task[0m) =====================
+[91mTraceback (most recent call last):
+  File "/Users/Shared/robocorp/ht/e27dca1_5a1fac3_9fcd2534/lib/python3.10/site-packages/robocorp/tasks/_commands.py", line 453, in run
+    result = task.run(**kwargs)
+  File "/Users/Shared/robocorp/ht/e27dca1_5a1fac3_9fcd2534/lib/python3.10/site-packages/robocorp/tasks/_task.py", line 57, in run
+    return self.method(**kwargs)
+  File "/Users/pixuquinha-mac/Documents/Projetos/Python/ThoguhtfulAI-Practice/New/tasks.py", line 11, in minimal_task
+    search_phrase = work_item.get_work_item_variable('search_phrase', 'default_value')
+  File "/Users/Shared/robocorp/ht/e27dca1_5a1fac3_9fcd2534/lib/python3.10/site-packages/RPA/Robocorp/WorkItems.py", line 1413, in get_work_item_variable
+    variables = self.get_work_item_variables()
+  File "/Users/Shared/robocorp/ht/e27dca1_5a1fac3_9fcd2534/lib/python3.10/site-packages/RPA/Robocorp/WorkItems.py", line 1446, in get_work_item_variables
+    payload = self.current.payload
+  File "/Users/Shared/robocorp/ht/e27dca1_5a1fac3_9fcd2534/lib/python3.10/site-packages/RPA/Robocorp/WorkItems.py", line 973, in current
+    raise RuntimeError("No active work item")
+RuntimeError: No active work item
+
+[0m================================================================================
 Robocorp Log (html): /Users/pixuquinha-mac/Documents/Projetos/Python/ThoguhtfulAI-Practice/New/output/log.html
