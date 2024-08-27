@@ -7,6 +7,7 @@ from src.main import main
 def minimal_task():
     wi = WorkItems()
     wi.get_input_work_item()
+    
     search_phrase = wi.get_work_item_variable('search_phrase')
     print(search_phrase)
 
