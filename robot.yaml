@@ -17,5 +17,8 @@ PATH:
   - .
 PYTHONPATH:
   - .
+  
+workItemName: default-in
+
 ignoreFiles:
   - .gitignore

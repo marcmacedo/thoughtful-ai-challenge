@@ -1,16 +1,14 @@
 from robocorp.tasks import task
 # from robocorp.workitems import WorkItem
 from RPA.Robocorp.WorkItems import WorkItems
+from src.main import main
 
 @task
 def minimal_task():
-    work_item = WorkItems()
+    wi = WorkItems()
+    wi.get_input_work_item()
+    search_phrase = wi.get_work_item_variable('search_phrase')
+    print(search_phrase)
 
 
-    # teste = work_item.get_input_work_item()
-    search_phrase = work_item.get_work_item_variable('search_phrase', 'default_value')
-    months = work_item.get_work_item_variable('months', 'default_value')
-    headless = work_item.get_work_item_variable('headless', 'default_value')
-
-    from src.main import main
-    main(search_phrase, months, headless)
+    # main(search_phrase, months, headless)
