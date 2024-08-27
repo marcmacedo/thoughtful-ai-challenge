@@ -9,6 +9,5 @@ def minimal_task():
 
     search_phrase = wi.get_work_item_variable('search_phrase')
     months = wi.get_work_item_variable('months')
-    headless = wi.get_work_item_variable('headless')
 
-    main(search_phrase, months, headless)
+    main(search_phrase, months)

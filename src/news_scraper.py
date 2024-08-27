@@ -44,15 +44,14 @@ class NewsScraper:
                 EC.presence_of_all_elements_located((By.XPATH, '//*[@id="main-content-area"]/div[2]/div[1]/div/div'))
             )
 
-
+            # Sorting results by date
             filter_by_date = self.driver.find_element(By.XPATH, '//*[@id="search-sort-option"]')
             filter_by_date = Select(filter_by_date)
             filter_by_date.select_by_value('date')
-
-
+            
             try:
                 while True:
-                    logger.info('Bringing all results on page by clicking on \'show more\' button')
+                    logger.info('Attempting to load more results on page')
                     show_more_button = WebDriverWait(self.driver, 10).until(
                         EC.presence_of_element_located((By.CSS_SELECTOR, '#main-content-area > div.l-col.l-col--8 > div.search-result__list > button'))
                     )
@@ -60,7 +59,7 @@ class NewsScraper:
 
 
             except:
-                logger.info('All results loaded on page, terminating loop')
+                logger.info('All results loaded, terminating loop')
 
         except Exception as e:
             logger.error(f'Error while trying to search news: {e}')
@@ -121,10 +120,10 @@ class NewsScraper:
 
                 
                 
+                ''' Converting relative date below '''
                 if creation_date and creation_date >= start_date:
                     logger.info(f'Collecting infos on filtered results')
 
-                    ''' Converting relative date '''
 
                     # In case date formate is in days ago (i.e. 3 days ago)
                     match = re.match(r'(\d+)\s+days?\s+ago', str(creation_date))
@@ -146,12 +145,15 @@ class NewsScraper:
                         creation_date = exact_date.strftime('%m-%d-%Y')
                     except ValueError:
                         pass
-                    # ------------------------
+                    ''' -------------------------- '''
 
+
+                    # Getting images from each news
                     logger.info(f'Collecting images from filtered results (current result {register})')
                     img_elements = news.find_elements(By.XPATH, f'//*[@id="main-content-area"]/div[2]/div[2]/article[{register}]/div[3]/div/div/img')
                     img_url = img_elements[0].get_attribute('src') if img_elements else None
 
+                    # Hashing url to create a unique name for images, because there's no image name on img tag
                     if img_url:
                         img_name = hashlib.md5(img_url.encode()).hexdigest() + '.jpg'
                         img_path = os.path.join(IMAGES_PATH, img_name)
@@ -164,9 +166,12 @@ class NewsScraper:
                         logger.info(f'No image found for result number {register}')
                         img_name = "No image found"
                     
+
+                    # Checking if there's money mention on title and description
                     has_money = bool(re.search(r"\$\d+(\.\d{2})?|\d+ dollars|\d+ USD", title + description))
                     
                     
+                    # Adding news to news_data array so it can be processed as a DataFrame later
                     news_data.append({
                         "register": register,
                         "title": title,
@@ -182,4 +187,5 @@ class NewsScraper:
             except Exception as e:
                 logger.error(f'Error collecting data for register number {register}: {e}')
             register += 1
+
         return news_data
