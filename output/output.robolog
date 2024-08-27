@@ -1,0 +1,441 @@
+V 0.0.4
+T 2024-08-27T03:00:13.373+00:00
+ID 1|7acc913e-6420-11ef-8328-9a5556fff290
+I "sys.platform=darwin"
+I "python=3.10.12 | packaged by conda-forge | (main, Jun 23 2023, 22:39:40) [Clang 15.0.7 ]"
+M a:"tasks.py"
+SR a|0.002
+M c:"Collect tasks"
+M d:"setup"
+M e:""
+P b:c|d|e|e|0
+ST b|0.002
+M f:"regular"
+M g:"\nCollecting tasks from: tasks.py\n"
+C f|g|0.003
+M h:"Error when importing module 'tasks'\n  at location '/Users/pixuquinha-mac/Documents/Projetos/Python/ThoguhtfulAI-Practice/New/tasks.py'\n  (with root: '/Users/pixuquinha-mac/Documents/Projetos/Python/ThoguhtfulAI-Practice/New')."
+M j:"import_path"
+M k:"robocorp.tasks"
+M l:"/Users/Shared/robocorp/ht/e27dca1_5a1fac3_9fcd2534/lib/python3.10/site-packages/robocorp/tasks/_collect_tasks.py"
+P i:j|k|l|e|107
+L E|h|i|107|0.004
+M m:"ImportError: cannot import name 'get_work_item' from 'robocorp.tasks' (/Users/Shared/robocorp/ht/e27dca1_5a1fac3_9fcd2534/lib/python3.10/site-packages/robocorp/tasks/__init__.py)"
+STB m|0.004
+M n:"/Users/Shared/robocorp/ht/e27dca1_5a1fac3_9fcd2534/lib/python3.10/runpy.py"
+M o:"_run_module_as_main"
+M p:"return _run_code(code, main_globals, None,"
+TBE n|196|o|p
+M q:"mod_name"
+M r:"str"
+M s:"'robocorp.tasks.__main__'"
+TBV q|r|s
+M t:"alter_argv"
+M u:"bool"
+M v:"True"
+TBV t|u|v
+M w:"mod_spec"
+M x:"ModuleSpec"
+M y:"ModuleSpec(name='robocorp.tasks.__main__', loader=<_frozen_importlib_external.SourceFileLoader object at 0x10de5ba60>, origin='/Users/Shared/robocorp/ht/e27dca1_5a1fac3_9fcd2534/lib/python3.10/site-packages/robocorp/tasks/__main__.py')"
+TBV w|x|y
+M z:"code"
+M A:"<code object <module> at 0x10da8ead0, file \"/Users/Shared/robocorp/ht/e27dca1_5a1fac3_9fcd2534/lib/python3.10/site-packages/robocorp/tasks/__main__.py\", line 1>"
+TBV z|z|A
+M B:"main_globals"
+M C:"dict"
+M D:"{'__name__': '__main__', '__doc__': None, '__package__': 'robocorp.tasks', '__loader__': <_frozen_importlib_external.SourceFileLoader object at 0x10de5ba60>, '__spec__': ModuleSpec(name='robocorp.tasks.__main__', loader=<_frozen_importlib_external.SourceFileLoader object at 0x10de5ba60>, origin='/Users/Shared/robocorp/ht/e27dca1_5a1fac3_9fcd2534/lib/python3.10/site-packages/robocorp/tasks/__main__.py'), '__annotations__': {}, '__builtins__': <module 'builtins' (built-in)>, '__file__': '/Users/Shared/robocorp/ht/e27dca1_5a1fac3_9fcd2534/lib/python3.10/site-packages/robocorp/tasks/__main__.py', '__cached__': '/Users/pixuquinha-mac/.robocorp/temp/28da857cd9356466/Users/Shared/robocorp/ht/e27dca1_5a1fac3_9fcd2534/lib/python3.10/site-packages/robocorp/tasks/__main__.cpython-310.pyc', 'main': <function main at 0x10e0469e0>}"
+TBV B|C|D
+M E:"_run_code"
+M F:"exec(code, run_globals)"
+TBE n|86|E|F
+TBV z|z|A
+M G:"run_globals"
+TBV G|C|D
+M H:"init_globals"
+M I:"NoneType"
+M J:"None"
+TBV H|I|J
+M K:"'__main__'"
+TBV q|r|K
+TBV w|x|y
+M L:"pkg_name"
+M M:"'robocorp.tasks'"
+TBV L|r|M
+M N:"script_name"
+TBV N|I|J
+M O:"loader"
+M P:"SourceFileLoader"
+M Q:"<_frozen_importlib_external.SourceFileLoader object at 0x10de5ba60>"
+TBV O|P|Q
+M R:"fname"
+M S:"'/Users/Shared/robocorp/ht/e27dca1_5a1fac3_9fcd2534/lib/python3.10/site-packages/robocorp/tasks/__main__.py'"
+TBV R|r|S
+M T:"cached"
+M U:"'/Users/pixuquinha-mac/.robocorp/temp/28da857cd9356466/Users/Shared/robocorp/ht/e27dca1_5a1fac3_9fcd2534/lib/python3.10/site-packages/robocorp/tasks/__main__.cpython-310.pyc'"
+TBV T|r|U
+M V:"/Users/Shared/robocorp/ht/e27dca1_5a1fac3_9fcd2534/lib/python3.10/site-packages/robocorp/tasks/__main__.py"
+M W:"<module>"
+M X:"main()"
+TBE V|4|W|X
+M Y:"__name__"
+TBV Y|r|K
+M Z:"__doc__"
+TBV Z|I|J
+M 0:"__package__"
+TBV 0|r|M
+M 1:"__loader__"
+TBV 1|P|Q
+M 2:"__spec__"
+TBV 2|x|y
+M 3:"__annotations__"
+M 4:"{}"
+TBV 3|C|4
+M 5:"__builtins__"
+M 6:"module"
+M 7:"<module 'builtins' (built-in)>"
+TBV 5|6|7
+M 8:"__file__"
+TBV 8|r|S
+M 9:"__cached__"
+TBV 9|r|U
+M aa:"main"
+M ab:"function"
+M ac:"<function main at 0x10e0469e0>"
+TBV aa|ab|ac
+M ad:"/Users/Shared/robocorp/ht/e27dca1_5a1fac3_9fcd2534/lib/python3.10/site-packages/robocorp/tasks/cli.py"
+M ae:"returncode = dispatcher.process_args(args, pm=plugin_manager)"
+TBE ad|121|aa|ae
+M af:"args"
+M ag:"list"
+M ah:"['run', 'tasks.py']"
+TBV af|ag|ah
+M ai:"exit"
+TBV ai|u|v
+M aj:"argument_dispatcher"
+TBV aj|I|J
+M ak:"plugin_manager"
+TBV ak|I|J
+M al:"dispatcher"
+M am:"_ArgDispatcher"
+M an:"<robocorp.tasks._argdispatch._ArgDispatcher object at 0x10da5c9a0>"
+TBV al|am|an
+M ao:"/Users/Shared/robocorp/ht/e27dca1_5a1fac3_9fcd2534/lib/python3.10/site-packages/robocorp/tasks/_argdispatch.py"
+M ap:"process_args"
+M aq:"return self._dispatch(parsed, pm)"
+TBE ao|230|ap|aq
+M ar:"self"
+TBV ar|am|an
+TBV af|ag|ah
+M as:"pm"
+TBV as|I|J
+M at:"parsed"
+M au:"Namespace"
+M av:"Namespace(command='run', path='tasks.py', glob=None, task_name=None, output_dir='', max_log_files=5, max_log_file_size='1MB', console_colors='auto', log_output_to_stdout='', json_input=None, preload_module=None, no_status_rc=False, teardown_dump_threads_timeout=None, teardown_interrupt_timeout=None, os_exit=None)"
+TBV at|au|av
+M aw:"_dispatch"
+M ax:"return method(**dct)"
+TBE ao|25|aw|ax
+TBV ar|am|an
+TBV at|au|av
+TBV as|I|J
+M ay:"method"
+M az:"<function run at 0x10e90f760>"
+TBV ay|ab|az
+M aA:"dct"
+M aB:"{'path': 'tasks.py', 'glob': None, 'task_name': None, 'output_dir': '', 'max_log_files': 5, 'max_log_file_size': '1MB', 'console_colors': 'auto', 'log_output_to_stdout': '', 'json_input': None, 'preload_module': None, 'no_status_rc': False, 'teardown_dump_threads_timeout': None, 'teardown_interrupt_timeout': None, 'os_exit': None}"
+TBV aA|C|aB
+M aC:"/Users/Shared/robocorp/ht/e27dca1_5a1fac3_9fcd2534/lib/python3.10/site-packages/robocorp/tasks/_commands.py"
+M aD:"run"
+M aE:"tasks: List[ITask] = list(collect_tasks(pm, p, task_names, glob))"
+TBE aC|416|aD|aE
+M aF:"output_dir"
+M aG:"'/Users/pixuquinha-mac/Documents/Projetos/Python/ThoguhtfulAI-Practice/New/output'"
+TBV aF|r|aG
+M aH:"path"
+M aI:"'tasks.py'"
+TBV aH|r|aI
+M aJ:"task_name"
+TBV aJ|I|J
+M aK:"max_log_files"
+M aL:"int"
+M aM:"5"
+TBV aK|aL|aM
+M aN:"max_log_file_size"
+M aO:"'1MB'"
+TBV aN|r|aO
+M aP:"console_colors"
+M aQ:"'auto'"
+TBV aP|r|aQ
+M aR:"log_output_to_stdout"
+M aS:"''"
+TBV aR|r|aS
+M aT:"no_status_rc"
+M aU:"False"
+TBV aT|u|aU
+M aV:"teardown_dump_threads_timeout"
+M aW:"float"
+M aX:"5.0"
+TBV aV|aW|aX
+M aY:"teardown_interrupt_timeout"
+M aZ:"-1.0"
+TBV aY|aW|aZ
+M a0:"os_exit"
+TBV a0|r|aS
+M a1:"additional_arguments"
+TBV a1|I|J
+M a2:"preload_module"
+TBV a2|I|J
+M a3:"glob"
+TBV a3|I|J
+M a4:"json_input"
+TBV a4|I|J
+M a5:"PluginManager"
+M a6:"<robocorp.tasks._customization._plugin_manager.PluginManager object at 0x10df49990>"
+TBV as|a5|a6
+M a7:"copy"
+M a8:"<module 'copy' from '/Users/Shared/robocorp/ht/e27dca1_5a1fac3_9fcd2534/lib/python3.10/copy.py'>"
+TBV a7|6|a8
+M a9:"console"
+M ba:"<module 'robocorp.log.console' from '/Users/Shared/robocorp/ht/e27dca1_5a1fac3_9fcd2534/lib/python3.10/site-packages/robocorp/log/console.py'>"
+TBV a9|6|ba
+M bb:"redirect"
+M bc:"<module 'robocorp.log.redirect' from '/Users/Shared/robocorp/ht/e27dca1_5a1fac3_9fcd2534/lib/python3.10/site-packages/robocorp/log/redirect.py'>"
+TBV bb|6|bc
+M bd:"read_pyproject_toml"
+M be:"<function read_pyproject_toml at 0x10e99c8b0>"
+TBV bd|ab|be
+M bf:"read_robocorp_auto_log_config"
+M bg:"<function read_robocorp_auto_log_config at 0x10e99cd30>"
+TBV bf|ab|bg
+M bh:"interrupt_on_timeout"
+M bi:"<function interrupt_on_timeout at 0x10e99d5a0>"
+TBV bh|ab|bi
+M bj:"collect_tasks"
+M bk:"<function collect_tasks at 0x10e99da20>"
+TBV bj|ab|bk
+M bl:"RunConfig"
+M bm:"type"
+M bn:"<class 'robocorp.tasks._config.RunConfig'>"
+TBV bl|bm|bn
+M bo:"set_config"
+M bp:"<function set_config at 0x10e99dbd0>"
+TBV bo|ab|bp
+M bq:"RobocorpTasksCollectError"
+M br:"<class 'robocorp.tasks._exceptions.RobocorpTasksCollectError'>"
+TBV bq|bm|br
+M bs:"after_all_tasks_run"
+M bt:"SessionCallback"
+M bu:"<robocorp.tasks._hooks.SessionCallback object at 0x10daf3c70>"
+TBV bs|bt|bu
+M bv:"after_task_run"
+M bw:"Callback"
+M bx:"<robocorp.tasks._callback.Callback object at 0x10daf3c10>"
+TBV bv|bw|bx
+M by:"before_all_tasks_run"
+M bz:"<robocorp.tasks._hooks.SessionCallback object at 0x10daf3b80>"
+TBV by|bt|bz
+M bA:"before_task_run"
+M bB:"<robocorp.tasks._callback.Callback object at 0x10daf3bb0>"
+TBV bA|bw|bB
+M bC:"setup_cli_auto_logging"
+M bD:"<function setup_cli_auto_logging at 0x10e99e4d0>"
+TBV bC|ab|bD
+M bE:"setup_log_output"
+M bF:"<function setup_log_output at 0x10e99e560>"
+TBV bE|ab|bF
+M bG:"setup_log_output_to_port"
+M bH:"<function setup_log_output_to_port at 0x10e99e680>"
+TBV bG|ab|bH
+M bI:"Status"
+M bJ:"EnumMeta"
+M bK:"<enum 'Status'>"
+TBV bI|bJ|bK
+M bL:"Context"
+M bM:"<class 'robocorp.tasks._task.Context'>"
+TBV bL|bm|bM
+M bN:"set_current_task"
+M bO:"<function set_current_task at 0x10e99e8c0>"
+TBV bN|ab|bO
+M bP:"__tracebackhide__"
+M bQ:"1"
+TBV bP|aL|bQ
+M bR:"p"
+M bS:"PosixPath"
+M bT:"PosixPath('/Users/pixuquinha-mac/Documents/Projetos/Python/ThoguhtfulAI-Practice/New/tasks.py')"
+TBV bR|bS|bT
+M bU:"context"
+M bV:"<robocorp.tasks._task.Context object at 0x10df49210>"
+TBV bU|bL|bV
+M bW:"v"
+M bX:"'-1'"
+TBV bW|r|bX
+M bY:"os_exit_enum"
+M bZ:"_OsExit"
+M b0:"<_OsExit.NO: 0>"
+TBV bY|bZ|b0
+M b1:"used_env"
+TBV b1|u|v
+M b2:"faulthandler"
+M b3:"<module 'faulthandler' (built-in)>"
+TBV b2|6|b3
+M b4:"log"
+M b5:"<module 'robocorp.log' from '/Users/Shared/robocorp/ht/e27dca1_5a1fac3_9fcd2534/lib/python3.10/site-packages/robocorp/log/__init__.py'>"
+TBV b4|6|b5
+M b6:"task_names"
+M b7:"[]"
+TBV b6|ag|b7
+M b8:"task_or_tasks"
+M b9:"'tasks'"
+TBV b8|r|b9
+M ca:"pyproject_path_and_contents"
+TBV ca|I|J
+M cb:"config"
+M cc:"DefaultAutoLogConfig"
+M cd:"{\n  \"log_filter_rules\": [],\n  \"default_library_filter_kind\": \"log_on_project_call\"\n}"
+TBV cb|cc|cd
+M ce:"pyproject_toml_contents"
+TBV ce|C|4
+M cf:"output_dir_path"
+M cg:"PosixPath('/Users/pixuquinha-mac/Documents/Projetos/Python/ThoguhtfulAI-Practice/New/output')"
+TBV cf|bS|cg
+M ch:"run_config"
+M ci:"<robocorp.tasks._config.RunConfig object at 0x10df49f30>"
+TBV ch|bl|ci
+M cj:"json_loaded_arguments"
+TBV cj|I|J
+M ck:"e"
+M cl:"ImportError"
+M cm:"ImportError(\"cannot import name 'get_work_item' from 'robocorp.tasks' (/Users/Shared/robocorp/ht/e27dca1_5a1fac3_9fcd2534/lib/python3.10/site-packages/robocorp/tasks/__init__.py)\")"
+TBV ck|cl|cm
+M cn:"retcode"
+M co:"22"
+TBV cn|aL|co
+M cp:"run_name"
+TBV cp|r|aI
+M cq:"run_status"
+M cr:"'ERROR'"
+TBV cq|r|cr
+M cs:"setup_message"
+M ct:"\"cannot import name 'get_work_item' from 'robocorp.tasks' (/Users/Shared/robocorp/ht/e27dca1_5a1fac3_9fcd2534/lib/python3.10/site-packages/robocorp/tasks/__init__.py)\""
+TBV cs|r|ct
+M cu:"import_path(path, root=root)"
+TBE l|214|bj|cu
+TBV as|a5|a6
+TBV aH|bS|bT
+TBV a3|I|J
+M cv:"_constants"
+M cw:"<module 'robocorp.tasks._constants' from '/Users/Shared/robocorp/ht/e27dca1_5a1fac3_9fcd2534/lib/python3.10/site-packages/robocorp/tasks/_constants.py'>"
+TBV cv|6|cw
+M cx:"_hooks"
+M cy:"<module 'robocorp.tasks._hooks' from '/Users/Shared/robocorp/ht/e27dca1_5a1fac3_9fcd2534/lib/python3.10/site-packages/robocorp/tasks/_hooks.py'>"
+TBV cx|6|cy
+M cz:"task_names_as_set"
+M cA:"set"
+M cB:"set()"
+TBV cz|cA|cB
+M cC:"accept_task"
+M cD:"<function collect_tasks.<locals>.accept_task at 0x10f5653f0>"
+TBV cC|ab|cD
+M cE:"on_func_found"
+M cF:"<function collect_tasks.<locals>.on_func_found at 0x10f565510>"
+TBV cE|ab|cF
+M cG:"root"
+M cH:"PosixPath('/Users/pixuquinha-mac/Documents/Projetos/Python/ThoguhtfulAI-Practice/New')"
+TBV cG|bS|cH
+TBV b6|ag|b7
+M cI:"spec.loader.exec_module(mod)  # type: ignore[union-attr]"
+TBE l|105|j|cI
+TBV aH|bS|bT
+TBV cG|bS|cH
+M cJ:"importlib"
+M cK:"<module 'importlib' from '/Users/Shared/robocorp/ht/e27dca1_5a1fac3_9fcd2534/lib/python3.10/importlib/__init__.py'>"
+TBV cJ|6|cK
+M cL:"module_name"
+TBV cL|r|b9
+M cM:"mod"
+M cN:"<module 'tasks' from '/Users/pixuquinha-mac/Documents/Projetos/Python/ThoguhtfulAI-Practice/New/tasks.py'>"
+TBV cM|6|cN
+M cO:"meta_importer"
+M cP:"RewriteHook"
+M cQ:"<robocorp.log._rewrite_importhook.RewriteHook object at 0x10da7e530>"
+TBV cO|cP|cQ
+M cR:"spec"
+M cS:"ModuleSpec(name='tasks', loader=<robocorp.log._rewrite_importhook.RewriteHook object at 0x10da7e530>, origin='/Users/pixuquinha-mac/Documents/Projetos/Python/ThoguhtfulAI-Practice/New/tasks.py')"
+TBV cR|x|cS
+M cT:"/Users/Shared/robocorp/ht/e27dca1_5a1fac3_9fcd2534/lib/python3.10/site-packages/robocorp/log/_rewrite_importhook.py"
+M cU:"exec_module"
+M cV:"exec(co, module.__dict__)"
+TBE cT|197|cU|cV
+TBV ar|cP|cQ
+TBV 6|6|cN
+M cW:"fn"
+TBV cW|bS|bT
+M cX:"write"
+TBV cX|u|aU
+M cY:"cache_dir"
+M cZ:"PosixPath('/Users/pixuquinha-mac/.robocorp/temp/28da857cd9356466/Users/pixuquinha-mac/Documents/Projetos/Python/ThoguhtfulAI-Practice/New')"
+TBV cY|bS|cZ
+M c0:"filter_kind"
+M c1:"FilterKind"
+M c2:"<FilterKind.full_log: 'full'>"
+TBV c0|c1|c2
+M c3:"cache_name"
+M c4:"'tasks-full.cpython-310-log-0.0.25.pyc'"
+TBV c3|r|c4
+M c5:"pyc"
+M c6:"PosixPath('/Users/pixuquinha-mac/.robocorp/temp/28da857cd9356466/Users/pixuquinha-mac/Documents/Projetos/Python/ThoguhtfulAI-Practice/New/tasks-full.cpython-310-log-0.0.25.pyc')"
+TBV c5|bS|c6
+M c7:"co"
+M c8:"<code object <module> at 0x10e88a340, file \"/Users/pixuquinha-mac/Documents/Projetos/Python/ThoguhtfulAI-Practice/New/tasks.py\", line 1>"
+TBV c7|z|c8
+M c9:"source_stat"
+M da:"stat_result"
+M db:"os.stat_result(st_mode=33261, st_ino=3246109, st_dev=16777230, st_nlink=1, st_uid=501, st_gid=20, st_size=380, st_atime=1724727442, st_mtime=1724727440, st_ctime=1724727440)"
+TBV c9|da|db
+M dc:"_tree"
+M dd:"Module"
+M de:"<ast.Module object at 0x10e7e5750>"
+TBV dc|dd|de
+M df:"/Users/pixuquinha-mac/Documents/Projetos/Python/ThoguhtfulAI-Practice/New/tasks.py"
+M dg:"from robocorp.tasks import task, get_work_item"
+TBE df|1|W|dg
+TBV Y|r|b9
+TBV Z|I|J
+TBV 0|r|aS
+TBV 1|cP|cQ
+TBV 2|x|cS
+M dh:"'/Users/pixuquinha-mac/Documents/Projetos/Python/ThoguhtfulAI-Practice/New/tasks.py'"
+TBV 8|r|dh
+M di:"'/Users/pixuquinha-mac/.robocorp/temp/28da857cd9356466/Users/pixuquinha-mac/Documents/Projetos/Python/ThoguhtfulAI-Practice/New/tasks.cpython-310.pyc'"
+TBV 9|r|di
+M dj:"{'__name__': 'builtins', '__doc__': \"Built-in functions, exceptions, and other objects.\\n\\nNoteworthy: None is the `nil' object; Ellipsis represents `...' in slices.\", '__package__': '', '__loader__': <class '_frozen_importlib.BuiltinImporter'>, '__spec__': ModuleSpec(name='builtins', loader=<class '_frozen_importlib.BuiltinImporter'>, origin='built-in'), '__build_class__': <built-in function __build_class__>, '__import__': <built-in function __import__>, 'abs': <built-in function abs>, 'all': <built-in function all>, 'any': <built-in function any>, 'ascii': <built-in function ascii>, 'bin': <built-in function bin>, 'breakpoint': <built-in function breakpoint>, 'callable': <built-in function callable>, 'chr': <built-in function chr>, 'compile': <built-in function compile>, 'delattr': <built-in function delattr>, 'dir': <built-in function dir>, 'divmod': <built-in function divmod>, 'eval': <built-in function eval>, 'exec': <built-in function exec>, 'format': <built-in function format>, 'getattr': <built-in function getattr>, 'globals': <built-in function globals>, 'hasattr': <built-in function hasattr>, 'hash': <built-in function hash>, 'hex': <built-in function hex>, 'id': <built-in function id>, 'input': <built-in function input>, 'isinstance': <built-in function isinstance>, 'issubclass': <built-in function issubclass>, 'iter': <built-in function iter>, 'aiter': <built-in function aiter>, 'len': <built-in function len>, 'locals': <built-in function locals>, 'max': <built-in function max>, 'min': <built-in function min>, 'next': <built-in function next>, 'anext': <built-in function anext>, 'oct': <built-in function oct>, 'ord': <built-in function ord>, 'pow': <built-in function pow>, 'print': <built-in function print>, 'repr': <built-in function repr>, 'round': <built-in function round>, 'setattr': <built-in function setattr>, 'sorted': <built-in function sorted>, 'sum': <built-in function sum>, 'vars': <built-in function vars>, 'None': None, 'Ellipsis': Ellipsis, 'NotImplemented': NotImplemented, 'False': False, 'True': True, 'bool': <class 'bool'>, 'memoryview': <class 'memoryview'>, 'bytearray': <class 'bytearray'>, 'bytes': <class 'bytes'>, 'classmethod': <class 'classmethod'>, 'complex': <class 'complex'>, 'dict': <class 'dict'>, 'enumerate': <class 'enumerate'>, 'filter': <class 'filter'>, 'float': <class 'float'>, 'frozenset': <class 'frozenset'>, 'property': <class 'property'>, 'int': <class 'int'>, 'list': <class 'list'>, 'map': <class 'map'>, 'object': <class 'object'>, 'range': <class 'range'>, 'reversed': <class 'reversed'>, 'set': <class 'set'>, 'slice': <class 'slice'>, 'staticmethod': <class 'staticmethod'>, 'str': <class 'str'>, 'super': <class 'super'>, 'tuple': <class 'tuple'>, 'type': <class 'type'>, 'zip': <class 'zip'>, '__debug__': True, 'BaseException': <class 'BaseException'>, 'Exception': <class 'Exception'>, 'TypeError': <class 'TypeError'>, 'StopAsyncIteration': <class 'StopAsyncIteration'>, 'StopIteration': <class 'StopIteration'>, 'GeneratorExit': <class 'GeneratorExit'>, 'SystemExit': <class 'SystemExit'>, 'KeyboardInterrupt': <class 'KeyboardInterrupt'>, 'ImportError': <class 'ImportError'>, 'ModuleNotFoundError': <class 'ModuleNotFoundError'>, 'OSError': <class 'OSError'>, 'EnvironmentError': <class 'OSError'>, 'IOError': <class 'OSError'>, 'EOFError': <class 'EOFError'>, 'RuntimeError': <class 'RuntimeError'>, 'RecursionError': <class 'RecursionError'>, 'NotImplementedError': <class 'NotImplementedError'>, 'NameError': <class 'NameError'>, 'UnboundLocalError': <class 'UnboundLocalError'>, 'AttributeError': <class 'AttributeError'>, 'SyntaxError': <class 'SyntaxError'>, 'IndentationError': <class 'IndentationError'>, 'TabError': <class 'TabError'>, 'LookupError': <class 'LookupError'>, 'IndexError': <class 'IndexError'>, 'KeyError': <class 'KeyError'>, 'ValueError': <class 'ValueError'>, 'UnicodeError': <class 'UnicodeError'>, 'UnicodeEncodeError': <class 'UnicodeEncodeError'>, 'UnicodeDecodeError': <class 'UnicodeDecodeError'>, 'UnicodeTranslateError': <class 'UnicodeTranslateError'>, 'AssertionError': <class 'AssertionError'>, 'ArithmeticError': <class 'ArithmeticError'>, 'FloatingPointError': <class 'FloatingPointError'>, 'OverflowError': <class 'OverflowError'>, 'ZeroDivisionError': <class 'ZeroDivisionError'>, 'SystemError': <class 'SystemError'>, 'ReferenceError': <class 'ReferenceError'>, 'MemoryError': <class 'MemoryError'>, 'BufferError': <class 'BufferError'>, 'Warning': <class 'Warning'>, 'UserWarning': <class 'UserWarning'>, 'EncodingWarning': <class 'EncodingWarning'>, 'DeprecationWarning': <class 'DeprecationWarning'>, 'PendingDeprecationWarning': <class 'PendingDeprecationWarning'>, 'SyntaxWarning': <class 'SyntaxWarning'>, 'RuntimeWarning': <class 'RuntimeWarning'>, 'FutureWarning': <class 'FutureWarning'>, 'ImportWarning': <class 'ImportWarning'>, 'UnicodeWarning': <class 'UnicodeWarning'>, 'BytesWarning': <class 'BytesWarning'>, 'ResourceWarning': <class 'ResourceWarning'>, 'ConnectionError': <class 'ConnectionError'>, 'BlockingIOError': <class 'BlockingIOError'>, 'BrokenPipeError': <class 'BrokenPipeError'>, 'ChildProcessError': <class 'ChildProcessError'>, 'ConnectionAbortedError': <class 'ConnectionAbortedError'>, 'ConnectionRefusedError': <class 'ConnectionRefusedError'>, 'ConnectionResetError': <class 'ConnectionResetError'>, 'FileExistsError': <class 'FileExistsError'>, 'FileNotFoundError': <class 'FileNotFoundError'>, 'IsADirectoryError': <class 'IsADirectoryError'>, 'NotADirectoryError': <class 'NotADirectoryError'>, 'InterruptedError': <class 'InterruptedError'>, 'PermissionError': <class 'PermissionError'>, 'ProcessLookupError': <class 'ProcessLookupError'>, 'TimeoutError': <class 'TimeoutError'>, 'open': <built-in function open>, 'quit': Use quit() or Ctrl-D (i.e. EOF) to exit, 'exit': Use exit() or Ctrl-D (i.e. EOF) to exit, 'copyright': Copyright (c) 2001-2023 Python Software Foundation.\nAll Rights Reserved.\n\nCopyright (c) 2000 BeOpen.com.\nAll Rights Reserved.\n\nCopyright (c) 1995-2001 Corporation for National Research Initiatives.\nAll Rights Reserved.\n\nCopyright (c) 1991-1995 Stichting Mathematisch Centrum, Amsterdam.\nAll Rights Reserved., 'credits':     Thanks to CWI, CNRI, BeOpen.com, Zope Corporation and a cast of thousands\n    for supporting Python development.  See www.python.org for more information., 'license': Type license() to see the full license text, 'help': Type help() for interactive help, or help(object) for help about object.}"
+TBV 5|C|dj
+M dk:"task"
+M dl:"<function task at 0x10db32dd0>"
+TBV dk|ab|dl
+ETB 0.008
+M dm:"stderr"
+M dn:"Traceback (most recent call last):\n"
+C dm|dn|0.008
+C dm|e|0.008
+M do:"  File \"/Users/Shared/robocorp/ht/e27dca1_5a1fac3_9fcd2534/lib/python3.10/site-packages/robocorp/tasks/_commands.py\", line 416, in run\n    tasks: List[ITask] = list(collect_tasks(pm, p, task_names, glob))\n"
+C dm|do|0.008
+C dm|e|0.008
+M dp:"  File \"/Users/Shared/robocorp/ht/e27dca1_5a1fac3_9fcd2534/lib/python3.10/site-packages/robocorp/tasks/_collect_tasks.py\", line 214, in collect_tasks\n    import_path(path, root=root)\n"
+C dm|dp|0.008
+C dm|e|0.008
+M dq:"  File \"/Users/Shared/robocorp/ht/e27dca1_5a1fac3_9fcd2534/lib/python3.10/site-packages/robocorp/tasks/_collect_tasks.py\", line 105, in import_path\n    spec.loader.exec_module(mod)  # type: ignore[union-attr]\n"
+C dm|dq|0.008
+C dm|e|0.008
+M dr:"  File \"/Users/Shared/robocorp/ht/e27dca1_5a1fac3_9fcd2534/lib/python3.10/site-packages/robocorp/log/_rewrite_importhook.py\", line 197, in exec_module\n    exec(co, module.__dict__)\n"
+C dm|dr|0.008
+C dm|e|0.008
+M ds:"  File \"/Users/pixuquinha-mac/Documents/Projetos/Python/ThoguhtfulAI-Practice/New/tasks.py\", line 1, in <module>\n    from robocorp.tasks import task, get_work_item\n"
+C dm|ds|0.008
+C dm|e|0.008
+M dt:"ImportError: cannot import name 'get_work_item' from 'robocorp.tasks' (/Users/Shared/robocorp/ht/e27dca1_5a1fac3_9fcd2534/lib/python3.10/site-packages/robocorp/tasks/__init__.py)\n"
+C dm|dt|0.008
+C dm|e|0.008
+M du:"ERROR"
+M dv:"cannot import name 'get_work_item' from 'robocorp.tasks' (/Users/Shared/robocorp/ht/e27dca1_5a1fac3_9fcd2534/lib/python3.10/site-packages/robocorp/tasks/__init__.py)"
+ET du|dv|0.008
+ER du|0.008

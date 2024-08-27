@@ -1,0 +1,15 @@
+Error when importing module 'tasks'
+  at location '/Users/pixuquinha-mac/Documents/Projetos/Python/ThoguhtfulAI-Practice/New/tasks.py'
+  (with root: '/Users/pixuquinha-mac/Documents/Projetos/Python/ThoguhtfulAI-Practice/New').
+Traceback (most recent call last):
+  File "/Users/Shared/robocorp/ht/e27dca1_5a1fac3_9fcd2534/lib/python3.10/site-packages/robocorp/tasks/_commands.py", line 416, in run
+    tasks: List[ITask] = list(collect_tasks(pm, p, task_names, glob))
+  File "/Users/Shared/robocorp/ht/e27dca1_5a1fac3_9fcd2534/lib/python3.10/site-packages/robocorp/tasks/_collect_tasks.py", line 214, in collect_tasks
+    import_path(path, root=root)
+  File "/Users/Shared/robocorp/ht/e27dca1_5a1fac3_9fcd2534/lib/python3.10/site-packages/robocorp/tasks/_collect_tasks.py", line 105, in import_path
+    spec.loader.exec_module(mod)  # type: ignore[union-attr]
+  File "/Users/Shared/robocorp/ht/e27dca1_5a1fac3_9fcd2534/lib/python3.10/site-packages/robocorp/log/_rewrite_importhook.py", line 197, in exec_module
+    exec(co, module.__dict__)
+  File "/Users/pixuquinha-mac/Documents/Projetos/Python/ThoguhtfulAI-Practice/New/tasks.py", line 1, in <module>
+    from robocorp.tasks import task, get_work_item
+ImportError: cannot import name 'get_work_item' from 'robocorp.tasks' (/Users/Shared/robocorp/ht/e27dca1_5a1fac3_9fcd2534/lib/python3.10/site-packages/robocorp/tasks/__init__.py)
