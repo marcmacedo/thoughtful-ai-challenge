@@ -21,6 +21,10 @@ class WebDrvierManager:
 
         if self.headless:
             options.add_argument('--headless')
+            options.add_argument("--no-sandbox") 
+            options.add_argument("--disable-gpu") 
+            options.add_argument("--disable-dev-shm-usage")
+            options.add_argument("--remote-debugging-port=9222")
             options.add_argument('--window-size=1920x1080') # This line is necessary to locate some elements that are hidden when the screen size is small or headless | This is the solution I found to solve this problem
         
         # Supressing SSL warnings
