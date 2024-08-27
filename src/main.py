@@ -5,8 +5,6 @@ from excel_exporter import ExcelExporter
 from selenium.common.exceptions import TimeoutException
 from datetime import datetime
 from logger import setup_logger
-import argparse, sys
-
 
 logger = setup_logger()
 
